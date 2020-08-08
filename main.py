@@ -131,7 +131,7 @@ def main_worker(args):
     for epoch in range(args.start_epoch, args.epochs):
         lr_policy(epoch, iteration=None)
         cur_lr = get_lr(optimizer)
-
+        print("cur_lr: ", cur_lr)
         # Gradual pruning in GMP experiments
         if args.conv_type == "GMPConv" and epoch >= args.init_prune_epoch and epoch <= args.final_prune_epoch:
             total_prune_epochs = args.final_prune_epoch - args.init_prune_epoch + 1
@@ -201,9 +201,12 @@ def main_worker(args):
                     sparsity, total_params, thresh = m.getSparsity()
                     writer.add_scalar("sparsity/{}".format(n), sparsity, epoch)
                     writer.add_scalar("thresh/{}".format(n), thresh, epoch)
+                    print("sparsity, total_params, thresh", sparsity, total_params, thresh)
                     sum_sparse += int(((100 - sparsity) / 100) * total_params)
                     count += total_params
+                    print("sum_sparse, count", sum_sparse, count)
             total_sparsity = 100 - (100 * sum_sparse / count)
+            print("total_sparsity: ", total_sparsity)
             writer.add_scalar("sparsity/total", total_sparsity, epoch)
         writer.add_scalar("test/lr", cur_lr, epoch)
         end_epoch = time.time()
@@ -228,7 +231,7 @@ def main_worker(args):
                 json_data[n] = sparsity[0]
                 sum_sparse += int(((100 - sparsity[0]) / 100) * sparsity[1])
                 count += sparsity[1]
-                json_thres[n] = sparsity[2]
+                json_thres[n] = sparsity[2]-
         json_data["total"] = 100 - (100 * sum_sparse / count)
         if not os.path.exists("runs/layerwise_sparsity"):
             os.mkdir("runs/layerwise_sparsity")
@@ -374,10 +377,10 @@ def get_model(args):
 def get_optimizer(args, model):
     for n, v in model.named_parameters():
         if v.requires_grad:
-            pass #print("<DEBUG> gradient to", n)
+            print("<DEBUG> gradient to", n)
 
         if not v.requires_grad:
-            pass #print("<DEBUG> no gradient to", n)
+            print("<DEBUG> no gradient to", n)
 
     if args.optimizer == "sgd":
         parameters = list(model.named_parameters())
@@ -385,6 +388,11 @@ def get_optimizer(args, model):
         bn_params = [v for n, v in parameters if ("bn" in n) and v.requires_grad]
         # rest_params = [v for n, v in parameters if ("bn" not in n) and ('sparseThreshold' not in n) and v.requires_grad]
         rest_params = [v for n, v in parameters if ("bn" not in n) and ("sparseThreshold" not in n) and v.requires_grad]
+        if args.no_bn_decay:
+            print("no bn decay")
+        if args.st_decay is None:
+            print("no st decay")
+        print(args.monmentum, args.weight_decay, args.nesterov)
         optimizer = torch.optim.SGD(
             [
                 {
