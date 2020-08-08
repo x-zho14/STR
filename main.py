@@ -392,7 +392,7 @@ def get_optimizer(args, model):
             print("no bn decay")
         if args.st_decay is None:
             print("no st decay")
-        print(args.monmentum, args.weight_decay, args.nesterov)
+        print(args.momentum, args.weight_decay, args.nesterov)
         optimizer = torch.optim.SGD(
             [
                 {
