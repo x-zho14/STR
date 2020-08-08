@@ -159,7 +159,7 @@ def main_worker(args):
         best_acc5 = max(acc5, best_acc5)
         best_train_acc1 = max(train_acc1, best_train_acc1)
         best_train_acc5 = max(train_acc5, best_train_acc5)
-
+        print("best_acc1:", best_acc1)
         save = ((epoch % args.save_every) == 0) and args.save_every > 0
         if is_best or save or epoch == args.epochs - 1:
             if is_best:
