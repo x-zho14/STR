@@ -231,7 +231,7 @@ def main_worker(args):
                 json_data[n] = sparsity[0]
                 sum_sparse += int(((100 - sparsity[0]) / 100) * sparsity[1])
                 count += sparsity[1]
-                json_thres[n] = sparsity[2]-
+                json_thres[n] = sparsity[2]
         json_data["total"] = 100 - (100 * sum_sparse / count)
         if not os.path.exists("runs/layerwise_sparsity"):
             os.mkdir("runs/layerwise_sparsity")
