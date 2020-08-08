@@ -17,7 +17,7 @@ def sparseFunction(x, s, activation=torch.relu, f=torch.sigmoid):
 def initialize_sInit():
 
     if parser_args.sInit_type == "constant":
-        return parser_args.sInit_value*torch.ones([1, 1])
+        return -parser_args.sInit_value*torch.ones([1, 1])
 
 class STRConv(nn.Conv2d):
     def __init__(self, *args, **kwargs):
