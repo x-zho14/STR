@@ -259,6 +259,7 @@ def get_config(args):
     # override args
     loaded_yaml = yaml.load(yaml_txt, Loader=yaml.FullLoader)
     for v in override_args:
+        print(v)
         loaded_yaml[v] = getattr(args, v)
 
     print(f"=> Reading YAML config from {args.config}")
