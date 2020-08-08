@@ -205,7 +205,8 @@ def main_worker(args):
                     sum_sparse += int(((100 - sparsity) / 100) * total_params)
                     count += total_params
                     print("sum_sparse, count", sum_sparse, count)
-            total_sparsity = 100 - (100 * sum_sparse / count)
+                    print(float(sum_sparse) / float(count))
+            total_sparsity = 100 - (100 * float(sum_sparse) / float(count))
             print("total_sparsity: ", total_sparsity)
             writer.add_scalar("sparsity/total", total_sparsity, epoch)
         writer.add_scalar("test/lr", cur_lr, epoch)
