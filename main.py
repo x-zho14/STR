@@ -25,6 +25,9 @@ from trainer import train, validate
 
 import data
 import models
+import wandb
+
+wandb.init(project="str", name="str", config=args)
 
 
 def main():
