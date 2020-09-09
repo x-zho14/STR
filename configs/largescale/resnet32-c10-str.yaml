@@ -4,8 +4,8 @@ arch: resnet32
 
 # ===== Dataset ===== #
 data: data/
-set: CIFAR10
-name: resnet32_c10_STR_90.23
+set: CIFAR100
+name: resnet32_c100_STR
 
 # ===== Learning Rate Policy ======== #
 optimizer: sgd
@@ -14,8 +14,8 @@ lr_policy: cosine_lr
 warmup_length: 0
 
 # ===== Network training config ===== #
-epochs: 100
-weight_decay: 0.00002251757813 # Change this according to reported numbers in appendix
+epochs: 300
+weight_decay: 0.001 # Change this according to reported numbers in appendix
 momentum: 0.9
 batch_size: 256
 label_smoothing: 0
