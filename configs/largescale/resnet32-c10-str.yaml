@@ -4,7 +4,7 @@ arch: resnet32
 
 # ===== Dataset ===== #
 data: data/
-set: CIFAR100
+set: CIFAR10
 name: resnet32_c100_STR
 
 # ===== Learning Rate Policy ======== #
