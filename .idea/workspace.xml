@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26cc394-18c0-4cc4-a2c7-1918ff72a0c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/configs/largescale/mobilenetv1-str.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/largescale/mobilenetv1-str.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/largescale/mobilenetv1-dense.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/largescale/mobilenetv1-dense.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <workItem from="1606194360588" duration="517000" />
       <workItem from="1606197596355" duration="1389000" />
       <workItem from="1606448405108" duration="329000" />
-      <workItem from="1611065690931" duration="867000" />
+      <workItem from="1611065690931" duration="1241000" />
     </task>
     <servers />
   </component>

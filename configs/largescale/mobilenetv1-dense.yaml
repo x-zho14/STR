@@ -27,4 +27,4 @@ mode: fan_in
 nonlinearity: relu
 
 # ===== Hardware setup ===== #
-workers: 20
+workers: 8
