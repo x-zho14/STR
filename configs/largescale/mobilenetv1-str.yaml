@@ -15,7 +15,7 @@ warmup_length: 5
 
 # ===== Network training config ===== #
 epochs: 100
-weight_decay: 0.00003751757813 # Change this according to reported numbers in appendix
+weight_decay: 0.00004251757813 # Change this according to reported numbers in appendix
 momentum: 0.875
 batch_size: 256
 label_smoothing: 0.1
