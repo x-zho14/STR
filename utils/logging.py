@@ -2,7 +2,7 @@ import abc
 import tqdm
 
 from torch.utils.tensorboard import SummaryWriter
-
+import wandb
 
 class ProgressMeter(object):
     def __init__(self, num_batches, meters, prefix=""):
@@ -28,12 +28,13 @@ class ProgressMeter(object):
                 writer.add_scalar(
                     f"{prefix}/{meter.name}_val", val, global_step=global_step
                 )
+                wandb.log({f"{prefix}/{meter.name}_val": val}, step=global_step)
 
             if meter.write_avg:
                 writer.add_scalar(
                     f"{prefix}/{meter.name}_avg", avg, global_step=global_step
                 )
-
+                wandb.log({f"{prefix}/{meter.name}_avg": avg}, step=global_step)
     def _get_batch_fmtstr(self, num_batches):
         num_digits = len(str(num_batches // 1))
         fmt = "{:" + str(num_digits) + "d}"

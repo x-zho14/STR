@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26cc394-18c0-4cc4-a2c7-1918ff72a0c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/largescale/vgg19-c10-str.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,25 @@
       <workItem from="1598857188689" duration="2069000" />
       <workItem from="1599620958875" duration="971000" />
       <workItem from="1599812703276" duration="1888000" />
-      <workItem from="1600000369045" duration="295000" />
+      <workItem from="1600000369045" duration="658000" />
+      <workItem from="1600061163200" duration="485000" />
+      <workItem from="1600340803736" duration="231000" />
+      <workItem from="1601475461966" duration="393000" />
+      <workItem from="1601886213900" duration="470000" />
+      <workItem from="1602138726042" duration="155000" />
+      <workItem from="1602223215847" duration="267000" />
+      <workItem from="1603585717343" duration="2563000" />
+      <workItem from="1605272822635" duration="891000" />
+      <workItem from="1605318867741" duration="611000" />
+      <workItem from="1605509931639" duration="541000" />
+      <workItem from="1605702773062" duration="947000" />
+      <workItem from="1605744624794" duration="955000" />
+      <workItem from="1605888513274" duration="218000" />
+      <workItem from="1605921935484" duration="52000" />
+      <workItem from="1605977839039" duration="287000" />
+      <workItem from="1606194360588" duration="517000" />
+      <workItem from="1606197596355" duration="1389000" />
+      <workItem from="1606448405108" duration="329000" />
     </task>
     <servers />
   </component>

@@ -192,6 +192,7 @@ def main_worker(args):
             writer, prefix="diagnostics", global_step=epoch
         )
 
+
         writer.add_scalar("test/lr", cur_lr, epoch)
         end_epoch = time.time()
 
@@ -212,6 +213,8 @@ def main_worker(args):
             total_sparsity = float(sum_sparse) / float(count)
             print("total_sparsity: ", total_sparsity)
             writer.add_scalar("sparsity/total", total_sparsity, epoch)
+            wandb.log({f"prune_rate": total_sparsity}, step=epoch)
+            wandb.log({f"acc1": total_sparsity}, step=epoch)
         writer.add_scalar("test/lr", cur_lr, epoch)
         end_epoch = time.time()
 
