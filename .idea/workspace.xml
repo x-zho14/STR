@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26cc394-18c0-4cc4-a2c7-1918ff72a0c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/largescale/mobilenetv1-str.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/largescale/mobilenetv1-str.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <workItem from="1606194360588" duration="517000" />
       <workItem from="1606197596355" duration="1389000" />
       <workItem from="1606448405108" duration="329000" />
-      <workItem from="1611065690931" duration="694000" />
+      <workItem from="1611065690931" duration="867000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@
 arch: MobileNetV1
 
 # ===== Dataset ===== #
-data: /mnt/data/
+data: ~/local/
 set: ImageNet
 name: MobileNetV1_89.01
 
